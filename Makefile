@@ -1,15 +1,14 @@
 GPU=1
 CUDNN=1
 CUDNN_HALF=0
-OPENCV=1
+OPENCV=0
 AVX=0
 OPENMP=0
 LIBSO=0
 
-export PKG_CONFIG_PATH := /opt/opencv-3.3.1/lib/pkgconfig
-export PATH := /opt/opencv-3.3.1/bin:/usr/local/cuda-10.0/bin:$(PATH)
-export LD_LIBRARY_PATH := /opt/opencv-3.3.1/lib:/usr/local/cuda-10.0/lib64:$(LD_LIBRARY_PATH)
-export CPATH := /opt/opencv-3.3.1/include:/usr/local/cuda-10.0/include
+export PATH := /usr/local/cuda-9.2/bin:$(PATH)
+export LD_LIBRARY_PATH := /usr/local/cuda-9.2/lib64:$(LD_LIBRARY_PATH)
+export CPATH := /usr/local/cuda-9.2/include
 
 # set GPU=1 and CUDNN=1 to speedup on GPU
 # set CUDNN_HALF=1 to further speedup 3 x times (Mixed-precision using Tensor Cores) on GPU Tesla V100, Titan V, DGX-2
